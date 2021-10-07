@@ -29,6 +29,7 @@ const DatosMiEquipo = (props) => {
             quitarDeEquipo(id, 'good', props.usuario)
             : quitarDeEquipo(id, 'noGood', props.usuario)
     }
+
     return (
         <div className='mi-equipo__contenedor'>
             <h4 className='text-center'>Tu equipo es de tipo: <span className='fw-bolder text-primary'>{tipoDeEquipo}</span></h4>

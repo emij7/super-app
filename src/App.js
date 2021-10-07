@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, BrowserRouter } from "react-router-dom";
 import './App.css';
 import PaginaLogin from './pages/PaginaLogin';
 import Layout from "./components/Layout";
@@ -9,7 +9,7 @@ import MiEquipo from "./components/MiEquipo";
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <Layout>
         <UsuarioProvider>
           <Switch>
@@ -19,7 +19,7 @@ function App() {
           </Switch>
         </UsuarioProvider>
       </Layout>
-    </Router>
+    </BrowserRouter>
   );
 }
 

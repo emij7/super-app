@@ -8,6 +8,7 @@ const CajaSuperHeroe = (props) => {
 
     const [agregado, setagregado] = useState()
     const [borde, setBorde] = useState(undefined)
+
     useEffect(() => {
         if (props.bando === 'good') {
             setBorde('border-success')
@@ -18,7 +19,7 @@ const CajaSuperHeroe = (props) => {
 
     const manejoClickAnadir = () => {
         agregarAEquipo(props.id, props.bando, props.usuario)
-        if ((localStorage.getItem(`${props.usuario}`).search(`"${props.id}"`) !== -1)) {
+        if ((localStorage.getItem(`${props.usuario}`).search(`"${props.id}"`) !== -1) && agregado !== true) {
             setagregado(true)
         }
     }
