@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Switch, Route, BrowserRouter } from "react-router-dom";
+import { Switch, Route, BrowserRouter } from "react-router-dom";
 import './App.css';
 import PaginaLogin from './pages/PaginaLogin';
 import Layout from "./components/Layout";
@@ -13,9 +13,9 @@ function App() {
       <Layout>
         <UsuarioProvider>
           <Switch>
-            <Route exact path='/' component={PaginaLogin} />
             <Route exact path='/miEquipo' component={MiEquipo} />
             <Route exact path='/busqueda' component={Buscador} />
+            <Route path='/' component={PaginaLogin} />
           </Switch>
         </UsuarioProvider>
       </Layout>

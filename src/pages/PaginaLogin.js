@@ -6,7 +6,7 @@ import './styles.css'
 const PaginaLogin = () => {
     return (
         <div className="login-container"  >
-            <section className='title-container h-50 d-flex flex-row justify-content-center align-items-center m-4'>
+            <section className='title-container h-25 d-flex flex-row justify-content-center align-items-center'>
                 <h1 className='text-center'>Super-App</h1>
                 <img src={blackLogo} alt="Ícono puño color negro" className='h-25' />
             </section>

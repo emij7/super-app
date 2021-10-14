@@ -1,12 +1,12 @@
 import React, { useContext, useState } from 'react';
 import { useFormik } from 'formik';
 import { useHistory, Redirect } from 'react-router-dom';
-import axios from 'axios';
+// import axios from 'axios';
 import Alert from './Alert';
 import UsuarioContext from '../context/UsuarioContext';
 import validacionUsuario from './validacionUsuario'
 
-const URL = 'http://challenge-react.alkemy.org/'
+// const URL = 'http://challenge-react.alkemy.org/'
 
 const validate = values => {
   /*
@@ -34,25 +34,25 @@ const FormularioIngreso = () => {
 
   let history = useHistory() //Usehistory utilizado para redireccionar en caso de login aceptado.
 
-  const redireccionLogin = () => history.push('/MiEquipo')
+  const redireccionLogin = () => history.push('/miEquipo')
 
-  const peticion = (mail, pass) => {
-    //Llamado api para validar usuario y contraseña
-    axios.post(URL, {
-      email: mail,
-      password: pass
-    })
-      .then(function (response) {
-        setUsuario(mail)
-        validacionUsuario(mail)
-        localStorage.setItem('TOKEN', response.data.token)
-        redireccionLogin() //Login aceptado
-      })
-      .catch(function (error) {
-        console.log(error);
-        setalert(true)
-      });
-  }
+  // const peticion = (mail, pass) => {
+  //   //Llamado api para validar usuario y contraseña
+  //   axios.post(URL, {
+  //     email: mail,
+  //     password: pass
+  //   })
+  //     .then(function (response) {
+  //       setUsuario(mail)
+  //       validacionUsuario(mail)
+  //       localStorage.setItem('TOKEN', response.data.token)
+  //       redireccionLogin() //Login aceptado
+  //     })
+  //     .catch(function (error) {
+  //       console.log(error);
+  //       setalert(true)
+  //     });
+  // }
 
   const formik = useFormik({
     initialValues: {
@@ -61,14 +61,22 @@ const FormularioIngreso = () => {
     },
     validate,
     onSubmit: values => {
-      peticion(values.email, values.password)
-
+      if (values.email === 'challenge@alkemy.org' && values.password === 'react') {
+        // peticion(values.email, values.password)
+        setUsuario('challenge@alkemy.org')
+        validacionUsuario('challenge@alkemy.org')
+        localStorage.setItem('TOKEN', '123456')
+        redireccionLogin() //Login aceptado
+      } else {
+        setalert(true)
+      }
     }
   });
 
   if (!localStorage.TOKEN) {
     return (
       <div className='d-flex align-items-center flex-column'>
+
         <form onSubmit={formik.handleSubmit} className='w-75 d-flex flex-column'>
           <label htmlFor="email">Direccion de e-mail</label>
           <input
@@ -102,6 +110,11 @@ const FormularioIngreso = () => {
         {alert ?    //En caso de que haya error en la petición se muestra un alerta
           <Alert />
           : null}
+        <div className=' m-2 border border-3 rounded border-primary'>
+          <p className=' text-center m-0'>Con motivos de mostrar la aplicación, la autenticación ha sido simplificada.</p>
+          <p className='m-0 d-flex justify-content-between mx-4'>E-mail : <span className='text-primary'>challenge@alkemy.org</span> </p>
+          <p className='m-0 d-flex justify-content-between mx-4'>Contraseña: <span className='text-primary'>react</span> </p>
+        </div>
       </div>
     );
   }

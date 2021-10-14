@@ -42,14 +42,14 @@ const TarjetaHeroe = (props) => {
                     <div className="modo">
                         <div className="tarjeta-heroe__detalles bg-dark text-light rounded p-3" >
                             <h1>{props.nombre}</h1>
-                            <p>Nombre completo: {props.biografia['full-name']}</p>
-                            <p>Peso: {props.apariencia.weight[1]}</p>
-                            <p>Altura: {props.apariencia.height[1]}</p>
-                            <p>Color de ojos: {props.apariencia['eye-color']}</p>
-                            <p>Color de pelo: {props.apariencia['hair-color']}</p>
-                            <p>Lugar de Trabajo: {props.lugarTrabajo}</p>
+                            <p className="m-2">Nombre completo: {props.biografia['full-name']}</p>
+                            <p className="m-2">Peso: {props.apariencia.weight[1]}</p>
+                            <p className="m-2">Altura: {props.apariencia.height[1]}</p>
+                            <p className="m-2">Color de ojos: {props.apariencia['eye-color']}</p>
+                            <p className="m-2">Color de pelo: {props.apariencia['hair-color']}</p>
+                            <p className="m-2">Lugar de Trabajo: {props.lugarTrabajo}</p>
                             Aliases: {props.biografia.aliases.map((alias) => {
-                                return <p key={alias}>- {alias}<br /></p>
+                                return <p key={alias} className="m-1">- {alias}<br /></p>
                             })
                             }
                             <button onClick={closeModal} className='btn btn-dark boton d-block mx-auto' >Cerrar</button >
