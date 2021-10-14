@@ -110,10 +110,10 @@ const FormularioIngreso = () => {
         {alert ?    //En caso de que haya error en la petición se muestra un alerta
           <Alert />
           : null}
-        <div className=' m-2 border border-3 rounded border-primary'>
-          <p className=' text-center m-0'>Con motivos de mostrar la aplicación, la autenticación ha sido simplificada.</p>
-          <p className='m-0 d-flex justify-content-between mx-4'>E-mail : <span className='text-primary'>challenge@alkemy.org</span> </p>
-          <p className='m-0 d-flex justify-content-between mx-4'>Contraseña: <span className='text-primary'>react</span> </p>
+        <div className=' m-2 border border-4 rounded border-success'>
+          <p className=' text-center m-0 text-dark fw-bold'>Con motivos de mostrar la aplicación, la autenticación ha sido simplificada.</p>
+          <p className='m-0 d-flex justify-content-between mx-4 text-dark'>E-mail : <span className='text-primary '>challenge@alkemy.org</span> </p>
+          <p className='m-0 d-flex justify-content-between mx-4 text-dark'>Contraseña: <span className='text-primary '>react</span> </p>
         </div>
       </div>
     );

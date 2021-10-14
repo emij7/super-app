@@ -9,7 +9,7 @@ import MiEquipo from "./components/MiEquipo";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename='/super-app'>
       <Layout>
         <UsuarioProvider>
           <Switch>
