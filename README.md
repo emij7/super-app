@@ -2,7 +2,8 @@
 Aplicación para buscar super-heroes y elegir 6 de ellos para sumarlos a tu equipo.
 
 ## Tecnologías
-Creado usando react.js
+Creado usando react.js.
+
 Librerías:
 - React-router
 - Formik
