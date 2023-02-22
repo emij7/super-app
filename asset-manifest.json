@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/super-app/static/css/main.f0693749.chunk.css",
-    "main.js": "/super-app/static/js/main.9115cf24.chunk.js",
-    "main.js.map": "/super-app/static/js/main.9115cf24.chunk.js.map",
+    "main.css": "/super-app/static/css/main.93acd645.chunk.css",
+    "main.js": "/super-app/static/js/main.6bad61ea.chunk.js",
+    "main.js.map": "/super-app/static/js/main.6bad61ea.chunk.js.map",
     "runtime-main.js": "/super-app/static/js/runtime-main.933c77d2.js",
     "runtime-main.js.map": "/super-app/static/js/runtime-main.933c77d2.js.map",
     "static/css/2.53150396.chunk.css": "/super-app/static/css/2.53150396.chunk.css",
@@ -12,7 +12,7 @@
     "static/js/3.daa73849.chunk.js.map": "/super-app/static/js/3.daa73849.chunk.js.map",
     "index.html": "/super-app/index.html",
     "static/css/2.53150396.chunk.css.map": "/super-app/static/css/2.53150396.chunk.css.map",
-    "static/css/main.f0693749.chunk.css.map": "/super-app/static/css/main.f0693749.chunk.css.map",
+    "static/css/main.93acd645.chunk.css.map": "/super-app/static/css/main.93acd645.chunk.css.map",
     "static/js/2.54ddad9e.chunk.js.LICENSE.txt": "/super-app/static/js/2.54ddad9e.chunk.js.LICENSE.txt",
     "static/media/blackFist.3db0e8e6.png": "/super-app/static/media/blackFist.3db0e8e6.png",
     "static/media/whiteFist.7a7025a0.png": "/super-app/static/media/whiteFist.7a7025a0.png"
@@ -21,7 +21,7 @@
     "static/js/runtime-main.933c77d2.js",
     "static/css/2.53150396.chunk.css",
     "static/js/2.54ddad9e.chunk.js",
-    "static/css/main.f0693749.chunk.css",
-    "static/js/main.9115cf24.chunk.js"
+    "static/css/main.93acd645.chunk.css",
+    "static/js/main.6bad61ea.chunk.js"
   ]
 }
